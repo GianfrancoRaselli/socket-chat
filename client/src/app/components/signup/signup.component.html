@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-md-4 mx-auto">
+        <div class="card text-center animate__animated animate__flipInY animate__fast">
+            <div class="card-header">
+                <h3><strong>SignUp</strong></h3>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <input type="text" name="fullname" [(ngModel)]="user.fullname" placeholder="Full Name" class="form-control" autofocus>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input type="text" name="username" [(ngModel)]="user.username" placeholder="Username" class="form-control">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input type="password" name="password" [(ngModel)]="user.password" placeholder="Password" class="form-control">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <button class="btn btn-success btn-block" (click)="signUp()">
+                            SignUp
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

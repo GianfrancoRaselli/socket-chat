@@ -1,0 +1,34 @@
+<div class="m-10">
+  <div class="w-100">
+    <form>
+      <div class="form-group d-flex">
+        <input type="text" class="form-control" id="searchUser" placeholder="Search Users" [(ngModel)]="username" [ngModelOptions]="{ standalone: true }" (ngModelChange)="searchUsers()">
+        <button type="reset" class="btn btn-danger"(click)="clearUsers()">X</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="w-100" *ngIf="usersFound.length">
+    <p class="h4" style="text-decoration: underline;">Users Found</p>
+    <div class="w-100 d-flex p-2 mb-1 user" *ngFor="let user of usersFound" (click)="chooseUser(user)">
+      <div class="profile-img mr-2">
+        {{ user.username![0] }}
+      </div>
+      <span class="username">
+        {{ user.username }}
+      </span>
+    </div>
+  </div>
+  
+  <div class="w-100" *ngIf="!usersFound.length">
+    <p class="h4" style="text-decoration: underline;">Chat Users</p>
+    <div class="w-100 d-flex p-2 mb-1 user" *ngFor="let user of chatUsers" (click)="chooseUser(user)">
+      <div class="profile-img mr-2">
+        {{ user.username![0] }}
+      </div>
+      <span class="username">
+        {{ user.username }}
+      </span>
+    </div>
+  </div>
+</div>

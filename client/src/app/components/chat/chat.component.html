@@ -1,0 +1,2 @@
+<app-users [chatUsers]="chatUsers" (changeChat)="changeChat($event)" *ngIf="showUsers"></app-users>
+<app-conversation [userConversation]="userConversation" [chatsWithUserConversation]="chatsWithUserConversation" (backToUsers)="backToUsers()" *ngIf="!showUsers"></app-conversation>

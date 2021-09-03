@@ -1,0 +1,14 @@
+<div class="username">
+  <div class="h6 back" (click)="back()"><i class="fas fa-arrow-alt-circle-left"></i>&nbsp;Back to Users</div>
+  <p class="h4">User Char:&nbsp;{{ userConversation.username }}</p>
+</div>
+
+<div class="chatContainer">
+  <p [ngClass]="{ 'local': !(message.userFromId === userConversation._id), 'remoto': (message.userFromId === userConversation._id) }" *ngFor="let message of chatsWithUserConversation">{{ message.message }}</p>
+</div>
+
+<div class="inputContainer">
+  <form (submit)="sendMessage()">
+    <input type="text" [(ngModel)]="message" [ngModelOptions]="{ standalone: true }">
+  </form>
+</div>

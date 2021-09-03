@@ -1,0 +1,26 @@
+.profile-img {
+  height: 34px;
+  width: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  font-weight: 600;
+  font-size: 25px;
+  text-transform: uppercase;
+  background-color: rgb(240, 240, 240);
+}
+
+.username {
+  font-size: 21px;
+}
+
+.user {
+  background-color: rgb(204, 202, 202);
+  border-radius: 10px;
+}
+
+.user:hover {
+  cursor: pointer;
+  background-color: rgb(184, 183, 183);
+}
